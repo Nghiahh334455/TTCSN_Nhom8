@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+    }
+
+    .form {
+      width: 400px;
+      height: 500px;
+      margin: 100px auto;
+      background-color: white;
+      border-radius: 60px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .input-container {
+      margin: 20px 0;
+      position: relative;
+    }
+
+    .input-container input {
+      width: 60%;
+      padding: 10px;
+      border: none;
+      border-bottom: 2px solid #09599b;
+      outline: none;
+      background: transparent;
+    }
+
+    .icon {
+      position: absolute;
+      left: 20%;
+      bottom: 5px;
+      color: #2573b3;
+    }
+
+    .button {
+      width: 260px;
+      height: 40px;
+      background-color: #2573b3;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      opacity: 0.9;
+      margin-top: 20px;
+    }
+
+    .button:hover {
+      opacity: 1;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    }
+
+    .title {
+      font-size: 2rem;
+      color: #2573b3;
+      font-weight: bold;
+    }
+
+    .comment {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #09315f;
+      opacity: 0.8;
+    }
+
+    .comment:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form">
+      <div class="title">ĐĂNG NHẬP</div>
+      <form th:action="@{/Login}" method="post">
+        <div class="input-container">
+          <span class="icon"></span>
+          <input id="id" type="text" name="id" placeholder="Mã sinh viên" required> <!-- Đổi từ studentId thành id -->
+        </div>
+        <div class="input-container">
+          <span class="icon"></span>
+          <input id="pass" type="password" name="password" placeholder="Mật khẩu" required>
+        </div>
+        <button type="submit" class="button">Đăng nhập</button>
+      </form>
+      <div class="comment">Hệ thống hỗ trợ quản lý sinh viên</div>
+    </div>
+  </div>
+</body>
+</html>
