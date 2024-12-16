@@ -1,1 +1,3 @@
-new
+Phần code bên branch nguyen
+để chạy Demo: Tải file code về, mở ra tìm file application.yaml cài đặt sao cho phù hợp với máy của mình và tạo database phù hợp để kết nối
+chạy ứng dụng để dự án tự sinh các bảng trong DB
